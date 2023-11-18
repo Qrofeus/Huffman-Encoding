@@ -18,9 +18,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="filer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="char_counts.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -43,5 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="team_contributions.doc" />
+    <None Include="C:\Users\ninad\Downloads\Program 5 F23.pdf" />
   </ItemGroup>
 </Project>

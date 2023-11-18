@@ -128,7 +128,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="char_counts.cpp" />
-    <ClCompile Include="filer.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +139,7 @@
     <Text Include="freq.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="C:\Users\ninad\Downloads\Program 5 F23.pdf" />
     <None Include="team_contributions.doc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

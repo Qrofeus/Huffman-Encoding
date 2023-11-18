@@ -1,1 +1,9 @@
-Part 1: Ninad
+CSCI 58000 - Program 5 F23
+
+Part 1: Ninad Deshpande
+1. Read text file "clear.txt"
+2. Generate character counts for the text file from the standard ASCII 128 character set.
+3. Write each character's non-zero occurence from "clear.txt" to "freq.txt".
+
+class ChCounts implements both the functionality required in Part 1, linked to "main.cpp" using the "char_counts.h" header file.
+Source (clear.txt) and destination (freq.txt) text files defined in main file.

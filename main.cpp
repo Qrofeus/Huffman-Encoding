@@ -1,4 +1,3 @@
-#include "utility.h"
 #include "char_counts.h"
 
 using namespace std;
