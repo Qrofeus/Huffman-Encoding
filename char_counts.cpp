@@ -47,6 +47,11 @@ void ChCounts::write_to_file(string file_name) {
 		if (i < 32)
 			continue;
 
+		if (i == 32) {
+			file_pointer << "SP " << this->character_counts[i] << endl;
+			continue;
+		}
+
 		//Ignore characters with count == 0
 		if (this->character_counts[i] == 0)
 			continue;

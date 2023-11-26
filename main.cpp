@@ -1,4 +1,5 @@
 #include "char_counts.h"
+#include "PartTwo.cpp"
 
 using namespace std;
 
@@ -15,6 +16,9 @@ int main() {
 	ChCounts ch_counter;
 	ch_counter.generate_character_counts(READ_FILE_1);
 	ch_counter.write_to_file(WRITE_FILE_1);
+
+	// Part 2: Generate huffman codetable
+	generateCodeTable();
 
 	return 0;
 }
