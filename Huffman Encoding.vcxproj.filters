@@ -21,6 +21,9 @@
     <ClCompile Include="char_counts.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PartTwo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utility.h">
@@ -35,6 +38,9 @@
       <Filter>Source Files</Filter>
     </Text>
     <Text Include="clear.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="codetable.txt">
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>

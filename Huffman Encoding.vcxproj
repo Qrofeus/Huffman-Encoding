@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="char_counts.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PartTwo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="char_counts.h" />
@@ -136,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="clear.txt" />
+    <Text Include="codetable.txt" />
     <Text Include="freq.txt" />
   </ItemGroup>
   <ItemGroup>

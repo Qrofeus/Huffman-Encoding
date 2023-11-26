@@ -7,3 +7,8 @@ Part 1: Ninad Deshpande
 
 class ChCounts implements both the functionality required in Part 1, linked to "main.cpp" using the "char_counts.h" header file.
 Source (clear.txt) and destination (freq.txt) text files defined in main file.
+
+Part 2: Arushi Pandit
+1. Read text file "freq.txt"
+2. Created huffman tree using min-priority queue on frequency counts
+3. Wrote each character and its corresponding huffman code to "codetable.txt"
