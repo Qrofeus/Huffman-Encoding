@@ -11,4 +11,4 @@ Source (clear.txt) and destination (freq.txt) text files defined in main file.
 Part 2: Arushi Pandit
 1. Read text file "freq.txt"
 2. Created huffman tree using min-priority queue on frequency counts
-3. Wrote each character and its corresponding huffman code to "codetable.txt"
+3. Wrote each character and its corresponding huffman code to "codetable.txt" in order of ASCII values

@@ -32,6 +32,9 @@
     <ClInclude Include="char_counts.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="codetable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="freq.txt">
