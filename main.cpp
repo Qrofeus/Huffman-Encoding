@@ -18,6 +18,7 @@ int main() {
 	ch_counter.write_to_file(WRITE_FILE_1);
 
 	// Part 2: Generate huffman codetable
+	// Author: Arushi Pandit
 	generateCodeTable();
 
 	return 0;

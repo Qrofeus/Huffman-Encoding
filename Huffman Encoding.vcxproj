@@ -133,6 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="char_counts.h" />
+    <ClInclude Include="codetable.h" />
     <ClInclude Include="utility.h" />
   </ItemGroup>
   <ItemGroup>

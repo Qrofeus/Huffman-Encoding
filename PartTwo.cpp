@@ -1,27 +1,35 @@
-#include "utility.h"
+/*
+CSCI 58000: Program 5 Part Two
+Author: Arushi Pandit
+*/
 
-inline void writeCodeTable(Node* node, string code, ostream& codetable)
+#include "utility.h"
+#include "codetable.h"
+
+inline void writeCodeList(Node* node, string code, charCode code_list[])
 {
 	if (node == nullptr)
 		return;
 
 	string left_code = code + '0';
-	writeCodeTable(node->left, left_code, codetable);
+	writeCodeList(node->left, left_code, code_list);
 
 	if (node->character != -1)
 	{
 		if (node->character == 10)
-			codetable << "LF" << " " << code << endl;
+			code_list[node->character].character = "LF";
 
 		else if (node->character == 32)
-			codetable << "SP" << " " << code << endl;
+			code_list[node->character].character = "SP";
 
 		else
-			codetable << static_cast<char>(node->character) << " " << code << endl;
+			code_list[node->character].character = static_cast<char>(node->character);
+
+		code_list[node->character].code = code;
 	}
 
 	string right_code = code + '1';
-	writeCodeTable(node->right, right_code, codetable);
+	writeCodeList(node->right, right_code, code_list);
 
 	delete node; //free the memory
 }
@@ -84,10 +92,21 @@ inline void generateCodeTable()
 
 	} while (!q.empty() && flag);
 
+	charCode code_list[128];
+
+	for (int i = 0; i < 128; i++)
+		code_list[i].character = "-1";
+
+	writeCodeList(min1, "", code_list); //write the code table
+
 	ofstream codetable;
 	codetable.open("codetable.txt", fstream::out);
 
-	writeCodeTable(min1, "", codetable); //prints the code table
+	for (int i = 0; i < 128; i++)
+		if (code_list[i].character != "-1")
+			codetable << code_list[i].character << " " << code_list[i].code << endl;
 
 	codetable.close();
+
+	cout << "Code table written to codetable.txt\n";
 }
