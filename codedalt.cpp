@@ -46,15 +46,20 @@ int main() {
         return 1;
     }
 
-    std::unordered_map<char, std::string> codes;
+    std::unordered_map<std::string, std::string> codes;
 
     std::string line;
     while (std::getline(codeTableFile, line)) {
         std::istringstream iss(line);
-        char character;
+        std::string character;
         std::string code;
 
         if (iss >> character >> code) {
+            if (character == "LF") {
+                character = "\n";
+            } else if (character == "SP") {
+                character = " ";
+            }
             codes[character] = code;
         }
     }
