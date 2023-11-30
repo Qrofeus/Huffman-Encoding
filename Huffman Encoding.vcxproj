@@ -127,12 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="char_counts.cpp" />
+    <ClCompile Include="PartOne.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PartTwo.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="char_counts.h" />
+    <ClInclude Include="part_one.h" />
     <ClInclude Include="codetable.h" />
     <ClInclude Include="utility.h" />
   </ItemGroup>

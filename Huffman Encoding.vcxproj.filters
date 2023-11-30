@@ -18,7 +18,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="char_counts.cpp">
+    <ClCompile Include="PartOne.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PartTwo.cpp">
@@ -29,7 +29,10 @@
     <ClInclude Include="utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="char_counts.h">
+    <ClInclude Include="part_one.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="codetable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

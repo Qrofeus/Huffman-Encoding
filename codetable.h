@@ -2,7 +2,7 @@
 CSCI 58000: Program 5 Part Two
 Author: Arushi Pandit
 */
-
+#pragma once
 #include "utility.h"
 
 #ifndef CODETABLE_H
@@ -36,4 +36,3 @@ struct CompareFrequency {
 };
 
 #endif
-#pragma once
