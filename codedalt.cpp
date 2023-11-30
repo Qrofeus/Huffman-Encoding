@@ -39,12 +39,27 @@ int main() {
         return 1;
     }
 
-    std::unordered_map<char, std::string> codes = {
-        {'A', "00"},
-        {'B', "010"},
-        {'C', "100"}
-        
-    };
+    std::ifstream codeTableFile("codetable.txt");
+
+    if (!codeTableFile.is_open()) {
+        std::cerr << "Error opening code table file!" << std::endl;
+        return 1;
+    }
+
+    std::unordered_map<char, std::string> codes;
+
+    std::string line;
+    while (std::getline(codeTableFile, line)) {
+        std::istringstream iss(line);
+        char character;
+        std::string code;
+
+        if (iss >> character >> code) {
+            codes[character] = code;
+        }
+    }
+
+    codeTableFile.close();
 
     encodeAndWriteToFile(codes, outFile);
 
