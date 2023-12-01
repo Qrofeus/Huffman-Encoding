@@ -27,6 +27,9 @@
     <ClCompile Include="PartThree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PartFour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utility.h">
@@ -53,6 +56,12 @@
       <Filter>Source Files</Filter>
     </Text>
     <Text Include="decoded.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="codedalt.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="decodedalt.txt">
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>

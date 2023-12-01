@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="PartFour.cpp" />
     <ClCompile Include="PartOne.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PartThree.cpp" />
@@ -140,8 +141,10 @@
   <ItemGroup>
     <Text Include="clear.txt" />
     <Text Include="coded.txt" />
+    <Text Include="codedalt.txt" />
     <Text Include="codetable.txt" />
     <Text Include="decoded.txt" />
+    <Text Include="decodedalt.txt" />
     <Text Include="freq.txt" />
   </ItemGroup>
   <ItemGroup>

@@ -6,6 +6,8 @@ Author: Arushi Pandit
 #include "utility.h"
 #include "codetable.h"
 
+using namespace std;
+
 inline void writeCodeList(Node* node, string code, charCode code_list[])
 {
 	if (node == nullptr)

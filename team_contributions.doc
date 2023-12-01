@@ -26,3 +26,12 @@ Part 3B: --
 
 decoded.txt - size: 484 bytes (484 bytes)
 
+Part 4A: Sarth Kulkarni, Ninad Deshpande, Arushi Pandit
+1. Using the unordered_map codetable from part 3A, match the corresponding code for each character from "clear.txt"
+2. set() and reset() bits in a bitset<8> byte according to the codes, using a counter for indexing the active bit.
+3. After every 8 bits encoded in the bitset, convert the bitset to char and store in "codedalt.txt"
+4. For any leftover bits encoded in the bitset after the last character in "clear.txt" reset the unused bits and push the char to "codedalt.txt"
+
+codedalt.txt - size: 261 bytes (261 bytes)
+
+Part 4B: --

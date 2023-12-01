@@ -3,15 +3,15 @@ CSCI 58000: Program 5 Part Two
 Author: Arushi Pandit
 */
 #pragma once
-#include "utility.h"
-
 #ifndef CODETABLE_H
 #define CODETABLE_H
 
+#include "utility.h"
+
 struct charCode
 {
-	string character;
-	string code;
+	std::string character;
+	std::string code;
 };
 
 struct Node {
