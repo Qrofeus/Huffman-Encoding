@@ -25,6 +25,12 @@ struct Node {
 
 	Node(int fr, int ch, Node* lt, Node* rt)
 		: frequency(fr), character(ch), left(lt), right(rt) {}
+
+	Node(int ch)
+		: frequency(0), character(ch), left(nullptr), right(nullptr) {}
+
+	Node()
+		: frequency(0), character(NULL), left(nullptr), right(nullptr) {}
 };
 
 struct CompareFrequency {

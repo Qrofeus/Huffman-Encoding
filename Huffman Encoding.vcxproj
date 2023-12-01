@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="PartOne.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PartThree.cpp" />
     <ClCompile Include="PartTwo.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="clear.txt" />
+    <Text Include="coded.txt" />
     <Text Include="codetable.txt" />
     <Text Include="freq.txt" />
   </ItemGroup>
