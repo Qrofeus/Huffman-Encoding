@@ -30,7 +30,7 @@ struct Node {
 		: frequency(0), character(ch), left(nullptr), right(nullptr) {}
 
 	Node()
-		: frequency(0), character(NULL), left(nullptr), right(nullptr) {}
+		: frequency(0), character(-1), left(nullptr), right(nullptr) {}
 };
 
 struct CompareFrequency {

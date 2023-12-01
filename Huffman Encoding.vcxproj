@@ -141,6 +141,7 @@
     <Text Include="clear.txt" />
     <Text Include="coded.txt" />
     <Text Include="codetable.txt" />
+    <Text Include="decoded.txt" />
     <Text Include="freq.txt" />
   </ItemGroup>
   <ItemGroup>
