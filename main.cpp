@@ -39,7 +39,7 @@ int main() {
 	//decode_and_write_to_file(FILE_CODED, FILE_DECODED, huffman_root);
 
 	//Part 4A:
-	//encode_bitset(codetable, READ_FILE, FILE_CODEDALT);
+	encode_bitset(codetable, READ_FILE, FILE_CODEDALT);
 
 	//Part 4B:
 	decode_bitset(huffman_root, FILE_CODEDALT, FILE_DECODEDALT);

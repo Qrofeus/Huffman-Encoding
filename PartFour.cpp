@@ -3,6 +3,8 @@
 
 using namespace std;
 
+const int WORD_LENGTH = 8;
+
 //static unordered_map<char, string> read_codetable(string codetable_file) {
 //    ifstream codetable(codetable_file);
 //
@@ -76,28 +78,28 @@ static void encode_bitset(unordered_map<char, string> codes, string read_file, s
         exit(1);
     }
 
-    bitset<8> byte;
-    int bit_counter = 0;
+    bitset<WORD_LENGTH> word;
+    int bit_index = 0;
     char current_char;
 
     while (in_file.get(current_char)) {
         string code = codes.at(current_char);
         for (char ch : code) {
             if (ch == '1')
-                byte.set(bit_counter++);
+                word.set(bit_index++);
             else
-                byte.reset(bit_counter++);
-            if (bit_counter == 8) {
-                out_file << (char)byte.to_ulong();
-                bit_counter = 0;
+                word.reset(bit_index++);
+            if (bit_index == WORD_LENGTH) {
+                out_file << (char)word.to_ulong();
+                bit_index = 0;
             }
         }
     }
-    //Write any leftover bits in the byte, reset the last unused bits
-    if (bit_counter < 8) {
-        while (bit_counter < 8)
-            byte.reset(bit_counter++);
-        out_file << (char)byte.to_ulong();
+    //Write any leftover bits in the word, reset the last unused bits
+    if (bit_index < WORD_LENGTH) {
+        while (bit_index < WORD_LENGTH)
+            word.reset(bit_index++);
+        out_file << (char)word.to_ulong();
     }
 
     in_file.close();
@@ -127,21 +129,22 @@ static void decode_bitset(Node* root, string read_file, string write_file) {
 
     char currentChar;
     Node* current_node = root;
-    int bit_counter;
+    int bit_index;
 
     while (in_file.get(currentChar)) {
-        cout << (int)currentChar << endl;
-        bit_counter = 0;
-        bitset<8> byte(currentChar);
+        cout << (int)currentChar;
+        bit_index = 0;
+        bitset<WORD_LENGTH> word(currentChar);
 
-        while (bit_counter < 8) {
-            if (byte.test(bit_counter++))
+        while (bit_index < WORD_LENGTH) {
+            if (word.test(bit_index++))
                 current_node = current_node->right;
             else
                 current_node = current_node->left;
 
             if (current_node->character != -1) {
                 out_file << (char)current_node->character;
+                cout << ' ' << current_node->character << endl;
                 current_node = root;
             }
         }
