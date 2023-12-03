@@ -43,19 +43,19 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="freq.txt">
-      <Filter>Source Files</Filter>
-    </Text>
     <Text Include="clear.txt">
-      <Filter>Source Files</Filter>
-    </Text>
-    <Text Include="codetable.txt">
       <Filter>Source Files</Filter>
     </Text>
     <Text Include="coded.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="codetable.txt">
+      <Filter>Source Files</Filter>
+    </Text>
     <Text Include="decoded.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="freq.txt">
       <Filter>Source Files</Filter>
     </Text>
     <Text Include="codedalt.txt">
@@ -66,7 +66,7 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <None Include="team_contributions.doc" />
+    <None Include="diary.doc" />
     <None Include="C:\Users\ninad\Downloads\Program 5 F23.pdf" />
   </ItemGroup>
 </Project>

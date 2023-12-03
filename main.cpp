@@ -1,5 +1,5 @@
-//#include "part_one.h"
-//#include "PartTwo.cpp"
+#include "part_one.h"
+#include "PartTwo.cpp"
 #include "PartThree.cpp"
 #include "PartFour.cpp"
 
@@ -20,28 +20,26 @@ const string FILE_DECODEDALT = "decodedalt.txt";
 //---
 
 int main() {
-	////Part 1:
-	////Generate character count from given text file
-	//PartOne part_one;
-	//part_one.generate_character_counts(READ_FILE);
-	//part_one.write_to_file(FILE_CHAR_FREQUENCY);
+	//Part 1: Generate character count from given text file
+	PartOne part_one;
+	part_one.generate_character_counts(READ_FILE);
+	part_one.write_to_file(FILE_CHAR_FREQUENCY);
 
-	//// Part 2: Generate huffman codetable
-	//// Author: Arushi Pandit
-	//generateCodeTable();
+	// Part 2: Generate huffman codetable
+	generateCodeTable();
 
-	//Part 3A:
+	//Part 3A: Encode the "clear.txt" file using the Huffman codes stored in "codetable.txt"
 	unordered_map<char, string> codetable = read_codetable(FILE_CODETABLE);
-	//encode_and_write_to_file(codetable, READ_FILE, FILE_CODED);
+	encode_and_write_to_file(codetable, READ_FILE, FILE_CODED);
 
-	//Part 3B:
+	//Part 3B: Decode the previously encoded text file from "coded.txt" to "decoded.txt"
 	Node* huffman_root = generate_huffman_tree(codetable);
-	//decode_and_write_to_file(FILE_CODED, FILE_DECODED, huffman_root);
+	decode_and_write_to_file(FILE_CODED, FILE_DECODED, huffman_root);
 
-	//Part 4A:
+	//Part 4A: Using bit level operations, encode "clear.txt" to "codedalt.txt"
 	encode_bitset(codetable, READ_FILE, FILE_CODEDALT);
 
-	//Part 4B:
+	//Part 4B: Reading individual bits from the "codedalt.txt" file, decode it to "decodedalt.txt"
 	decode_bitset(huffman_root, FILE_CODEDALT, FILE_DECODEDALT);
 
 	return 0;

@@ -3,6 +3,8 @@
 
 using namespace std;
 
+//Team 6: Dasari, Deshpande, Kulkarni S., Nidumukkala, Pandit, Phirke
+
 const int WORD_LENGTH = 8;
 
 //static unordered_map<char, string> read_codetable(string codetable_file) {
@@ -96,11 +98,13 @@ static void encode_bitset(unordered_map<char, string> codes, string read_file, s
         }
     }
     //Write any leftover bits in the word, reset the last unused bits
-    if (bit_index < WORD_LENGTH) {
-        while (bit_index < WORD_LENGTH)
-            word.reset(bit_index++);
+    //if (bit_index < WORD_LENGTH) {
+    //    while (bit_index < WORD_LENGTH)
+    //        word.reset(bit_index++);
+    //    out_file << (char)word.to_ulong();
+    //}
+    if (bit_index > 0)
         out_file << (char)word.to_ulong();
-    }
 
     in_file.close();
     out_file.close();
@@ -110,7 +114,7 @@ static void encode_bitset(unordered_map<char, string> codes, string read_file, s
 
 
 static void decode_bitset(Node* root, string read_file, string write_file) {
-    ifstream in_file(read_file);
+    ifstream in_file(read_file, ios::binary);
     ofstream out_file(write_file);
 
     if (!in_file.is_open()) {
@@ -127,14 +131,13 @@ static void decode_bitset(Node* root, string read_file, string write_file) {
         exit(1);
     }
 
-    char currentChar;
+    int currentChar;
     Node* current_node = root;
     int bit_index;
 
-    while (in_file.get(currentChar)) {
-        cout << (int)currentChar;
+    while ((currentChar = in_file.get()) != EOF) {
         bit_index = 0;
-        bitset<WORD_LENGTH> word(currentChar);
+        bitset<WORD_LENGTH> word((unsigned long)currentChar);
 
         while (bit_index < WORD_LENGTH) {
             if (word.test(bit_index++))
@@ -144,7 +147,6 @@ static void decode_bitset(Node* root, string read_file, string write_file) {
 
             if (current_node->character != -1) {
                 out_file << (char)current_node->character;
-                cout << ' ' << current_node->character << endl;
                 current_node = root;
             }
         }

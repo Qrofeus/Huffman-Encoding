@@ -1,7 +1,3 @@
-/*
-CSCI 58000: Program 5 Part Two
-Author: Arushi Pandit
-*/
 #pragma once
 #ifndef CODETABLE_H
 #define CODETABLE_H
