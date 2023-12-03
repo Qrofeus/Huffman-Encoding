@@ -127,23 +127,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="char_counts.cpp" />
+    <ClCompile Include="PartFour.cpp" />
+    <ClCompile Include="PartOne.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PartThree.cpp" />
     <ClCompile Include="PartTwo.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="char_counts.h" />
+    <ClInclude Include="part_one.h" />
     <ClInclude Include="codetable.h" />
     <ClInclude Include="utility.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="clear.txt" />
+    <Text Include="coded.txt" />
+    <Text Include="codedalt.txt" />
     <Text Include="codetable.txt" />
+    <Text Include="decoded.txt" />
+    <Text Include="decodedalt.txt" />
     <Text Include="freq.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="C:\Users\ninad\Downloads\Program 5 F23.pdf" />
-    <None Include="team_contributions.doc" />
+    <None Include="diary.doc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,0 +1,67 @@
+CSCI 58000 - Program 5 F23
+Team 6: Dasari, Deshpande, Kulkarni S., Nidumukkala, Pandit, Phirke
+
+
+clear.txt - size: 484 bytes (484 bytes)
+
+Program ->
+Part 1: Ninad Deshpande
+1. Read text file "clear.txt"
+2. Generate character counts for the text file from the standard ASCII 128 character set.
+3. Write each character's non-zero occurence from "clear.txt" to "freq.txt".
+
+Part 2: Arushi Pandit
+1. Read text file "freq.txt"
+2. Created huffman tree using min-priority queue on frequency counts
+3. Wrote each character and its corresponding huffman code to "codetable.txt" ordered by ASCII values
+
+Part 3A: Hari Priya Dasari, Arushi Pandit
+1. Read codes from "codetable.txt". Generate unordered_map<char, string> codetable.
+2. Read each character from "clear.txt", encode by finding the corresponding code from codetable.
+3. Write coded value of character to "coded.txt". Continue until EOF for "clear.txt".
+
+coded.txt - size: 2.03 KB (2,084 bytes)
+
+Part 3B: Lasya Sri Nidumukkala, Ninad Deshpande
+1. Generate Huffman Tree from the unordered_map codetable.
+2. Read each character from "coded.txt", traverse the Huffman Tree from root, moving left/right based on input '0' or '1' until a leaf is reached.
+3. Write the character corresponding to the leaf to "decoded.txt", reset the pointer to root. Continue until EOF for "coded.txt".
+
+decoded.txt - size: 484 bytes (484 bytes)
+
+Part 4A: Sarth Kulkarni, Ninad Deshpande
+1. Using the unordered_map codetable from part 3A, match the corresponding code for each character from "clear.txt"
+2. set() and reset() bits in a bitset<8> byte according to the codes, using a counter for indexing the active bit.
+3. After every 8 bits encoded in the bitset, convert the bitset to char and store in "codedalt.txt"
+4. For any leftover bits encoded in the bitset after the last character in "clear.txt" reset the unused bits and push the char to "codedalt.txt"
+
+codedalt.txt - size: 261 bytes (261 bytes)
+
+Part 4B: Aashay Phirke, Arushi Pandit
+1. Read the "codedalt.txt" in ios::binary mode. Convert each character to it's bitset reprensentation.
+2. Form the generated Huffman Tree in Part 3B, traverse the Huffman Tree according to the bit values in bitset.
+3. Whenever a leaf is reached in the Huffman Tree, write that character to "decodedalt.txt".
+4. Continue until all encoded characters from "codedalt.txt" are used.
+5. Final decoded text will be saved in "decodedalt.txt"
+
+decodedalt.txt - size: 484 bytes (484 bytes)
+
+Extra Credits:
+"main.cpp" file contains the main() function which will carry out all 4 parts of the program in order.
+Code compilation, reformatting: Ninad Deshpande
+
+
+Text file size comparisons:
+clear.txt - size: 484 bytes (484 bytes)
+coded.txt - size: 2.03 KB (2,084 bytes)
+codedalt.txt - size: 261 bytes (261 bytes)
+
+decoded.txt - size: 484 bytes (484 bytes)
+decodedalt.txt - size: 484 bytes (484 bytes)
+
+In part 3A of the program when we are encoding the characters to their binary values generated using the Huffman Encoding algorithm, we are storing the string values "0" and "1".
+As the string values in a text file (UTF-8) are stored in 8 bit (1 Byte) sets, we are essentially wasting 7 bits of capacity for every "0" or "1" we store.
+These unnecessary bits cause the "coded.txt" file to be significantly larger than the original "clear.txt" file.
+
+This is mitigated in part 4A, where we assign each individual bit the encoded value of the characters. When working with individual bits for encoding characters, we only work with the required amount of bits.
+This approach then satisfies the goal of Huffman Encoding as a space-saving (data compaction) algorithm, as the "codedalt.txt" is smaller than "clear.txt".

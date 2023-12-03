@@ -18,10 +18,16 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="char_counts.cpp">
+    <ClCompile Include="PartOne.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PartTwo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PartThree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PartFour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,23 +35,38 @@
     <ClInclude Include="utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="char_counts.h">
+    <ClInclude Include="part_one.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="codetable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="freq.txt">
+    <Text Include="clear.txt">
       <Filter>Source Files</Filter>
     </Text>
-    <Text Include="clear.txt">
+    <Text Include="coded.txt">
       <Filter>Source Files</Filter>
     </Text>
     <Text Include="codetable.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="decoded.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="freq.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="codedalt.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="decodedalt.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
-    <None Include="team_contributions.doc" />
+    <None Include="diary.doc" />
     <None Include="C:\Users\ninad\Downloads\Program 5 F23.pdf" />
   </ItemGroup>
 </Project>

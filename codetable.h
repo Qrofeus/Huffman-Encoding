@@ -1,17 +1,13 @@
-/*
-CSCI 58000: Program 5 Part Two
-Author: Arushi Pandit
-*/
-
-#include "utility.h"
-
+#pragma once
 #ifndef CODETABLE_H
 #define CODETABLE_H
 
+#include "utility.h"
+
 struct charCode
 {
-	string character;
-	string code;
+	std::string character;
+	std::string code;
 };
 
 struct Node {
@@ -25,6 +21,12 @@ struct Node {
 
 	Node(int fr, int ch, Node* lt, Node* rt)
 		: frequency(fr), character(ch), left(lt), right(rt) {}
+
+	Node(int ch)
+		: frequency(0), character(ch), left(nullptr), right(nullptr) {}
+
+	Node()
+		: frequency(0), character(-1), left(nullptr), right(nullptr) {}
 };
 
 struct CompareFrequency {
@@ -36,4 +38,3 @@ struct CompareFrequency {
 };
 
 #endif
-#pragma once
