@@ -7,60 +7,10 @@ using namespace std;
 
 const int WORD_LENGTH = 8;
 
-//static unordered_map<char, string> read_codetable(string codetable_file) {
-//    ifstream codetable(codetable_file);
-//
-//    if (!codetable.is_open()) {
-//        cerr << codetable_file << " file could not be opened.";
-//        codetable.close();
-//        exit(1);
-//    }
-//
-//    unordered_map<char, string> codes;
-//
-//    string key, code;
-//    char character;
-//
-//    while (codetable >> key >> code) {
-//        if (key == "LF")
-//            character = '\n';
-//        else if (key == "SP")
-//            character = ' ';
-//        else
-//            character = key[0];
-//        codes[character] = code;
-//    }
-//
-//    codetable.close();
-//    return codes;
-//}
-//
-//static Node* generate_huffman_tree(const unordered_map<char, string>& codetable) {
-//    Node* root_node = new Node();
-//    Node* current_node;
-//
-//    for (auto iterator : codetable) {
-//        current_node = root_node;
-//        string code = iterator.second;
-//
-//        for (char bit : code) {
-//            if (bit == '0') {
-//                if (current_node->left == nullptr)
-//                    current_node->left = new Node();
-//                current_node = current_node->left;
-//            }
-//            if (bit == '1') {
-//                if (current_node->right == nullptr)
-//                    current_node->right = new Node();
-//                current_node = current_node->right;
-//            }
-//        }
-//
-//        current_node->character = (int)iterator.first;
-//    }
-//
-//    return root_node;
-//}
+// This implementation uses unordered_map<> codetable and Node* Huffman Tree generated in part 3A and part 3B respectively
+// To implement PartFour.cpp independently copy the functions from PartThree.cpp:
+// static unordered_map<char, string> read_codetable(string codetable_file) {...}
+// static Node* generate_huffman_tree(const unordered_map<char, string>& codetable) {...}
 
 static void encode_bitset(unordered_map<char, string> codes, string read_file, string write_file) {
     ifstream in_file(read_file);
@@ -98,11 +48,6 @@ static void encode_bitset(unordered_map<char, string> codes, string read_file, s
         }
     }
     //Write any leftover bits in the word, reset the last unused bits
-    //if (bit_index < WORD_LENGTH) {
-    //    while (bit_index < WORD_LENGTH)
-    //        word.reset(bit_index++);
-    //    out_file << (char)word.to_ulong();
-    //}
     if (bit_index > 0)
         out_file << (char)word.to_ulong();
 

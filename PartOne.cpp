@@ -2,6 +2,8 @@
 
 using namespace std;
 
+//Team 6: Dasari, Deshpande, Kulkarni S., Nidumukkala, Pandit, Phirke
+
 void PartOne::generate_character_counts(string file_name) {
 	ifstream file_pointer;
 	file_pointer.open(file_name);
@@ -12,7 +14,7 @@ void PartOne::generate_character_counts(string file_name) {
 		exit(1);
 	}
 
-	this->character_counts.assign(ASCII_CHARACTERS, 0);
+	this->character_counts.assign(ASCII_CHARACTERS_COUNT, 0);
 	char ch;
 
 	while (file_pointer.get(ch)) {
@@ -42,7 +44,7 @@ void PartOne::write_to_file(string file_name) {
 
 	//Printable ASCII Characters start from index 32 -> " "
 	//https://en.cppreference.com/w/cpp/language/ascii
-	for (int i = 33; i < ASCII_CHARACTERS; i++)
+	for (int i = 33; i < ASCII_CHARACTERS_COUNT; i++)
 		if (this->character_counts[i] != 0)
 			file_pointer << char(i) << ' ' << this->character_counts[i] << endl;
 

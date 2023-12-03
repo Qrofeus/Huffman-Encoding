@@ -2,7 +2,7 @@
 
 #include "utility.h"
 
-const int ASCII_CHARACTERS = 128;
+const int ASCII_CHARACTERS_COUNT = 128;
 
 class PartOne {
 public:

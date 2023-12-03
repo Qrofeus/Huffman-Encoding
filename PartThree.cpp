@@ -3,7 +3,9 @@
 
 using namespace std;
 
-static void encode_and_write_to_file(const unordered_map<char, string>& codetable, string read_file, string write_file) {
+//Team 6: Dasari, Deshpande, Kulkarni S., Nidumukkala, Pandit, Phirke
+
+static void encode_string(const unordered_map<char, string>& codetable, string read_file, string write_file) {
     ifstream in_file(read_file);
     ofstream out_file(write_file);
 
@@ -86,7 +88,7 @@ static Node* generate_huffman_tree(const unordered_map<char, string>& codetable)
     return root_node;
 }
 
-static void decode_and_write_to_file(string read_file, string write_file, Node* root) {
+static void decode_string(string read_file, string write_file, Node* root) {
     ifstream in_file(read_file);
     ofstream out_file(write_file);
 
